@@ -1,0 +1,258 @@
+.topbar {
+  width: 100%;
+  height: 55px;
+  background-color: #fafafa;
+  color: #242424;
+  @include pie-clearfix();
+
+  .topbar__menulink {
+    display: inline-block;
+    line-height: 55px;
+    padding: 0 10px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      background-color: darken(#FAFAFA, 3%);
+    }
+  }
+
+  .topbar__nav {
+    float: left;
+
+    width: 50%;
+
+    @include breakpoint($md) {
+      width: 85%;
+    }
+
+    @include breakpoint($lg) {
+      width: 65%;
+    }
+
+    .topbar__menulink {
+      @include breakpoint($md) {
+        display: none;
+      }
+    }
+
+    nav {
+
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      //
+      width: 100%;
+      position: absolute;
+      z-index: 2;
+      //
+
+      @include breakpoint($md) {
+        display: block;
+        width: auto;
+        position: static;
+      }
+
+      ul {
+        @include pie-clearfix();
+
+        li {
+          margin-right: 2%;
+
+          //
+          float: none;
+          padding: 0 10px;
+          &:nth-child(2n) {
+            background-color: #FAFAFA;
+          }
+          &:nth-child(2n+1) {
+            background-color: #F4F4F4;
+          }
+          //
+
+          @include breakpoint($md) {
+            float: left;
+            padding: 0;
+            background-color: transparent !important;
+          }
+
+          @include breakpoint($lg) {
+            margin-right: 5%;
+          }
+
+          a {
+            color: #242424;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: 700;
+            line-height: 55px;
+            padding: 0;
+            border-bottom: 1px solid #CECECE;
+
+            //
+
+            //
+
+            &:hover {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .topbar__else {
+
+    width: 50%;
+    float: left;
+    text-align: right;
+    @include pie-clearfix();
+
+    @include breakpoint($md) {
+      width: 15%;
+    }
+
+    @include breakpoint($lg) {
+      width: 35%;
+    }
+
+    .topbar__signin {
+      display: inline-block;
+      vertical-align: middle;
+      text-decoration: none;
+      padding: 0 5px;
+      margin-right: 0;
+      line-height: 55px;
+
+      @include breakpoint($lg) {
+        margin-right: 5%;
+        padding: 0 10px;
+      }
+      i {
+        font-size: 22px;
+        color: #F82E36;
+        margin-right: 0;
+        display: inline-block;
+        vertical-align: middle;
+
+        @include breakpoint($lg) {
+          margin-right: 11px;
+        }
+      }
+      span {
+        color: #000;
+        font-size: 13px;
+        font-weight: 300;
+        border-bottom: 1px dashed #CECECE;
+        text-decoration: none;
+        display: none;
+        vertical-align: middle;
+        line-height: 1.4;
+
+        @include breakpoint($lg) {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        background-color: darken(#FAFAFA, 3%);
+        span {
+          border-color: transparent;
+        }
+        i {
+          color: lighten(#F82E36, 10%);
+        }
+      }
+    }
+    .topbar__search {
+      display: inline-block;
+      vertical-align: middle;
+      text-align: right;
+      padding: 0 5px;
+      text-decoration: none;
+      position: relative;
+
+      @include breakpoint($lg) {
+        padding: 0 10px;
+      }
+
+      .topbar__searchfield {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .5s ease;
+        line-height: 55px;
+        position: absolute;
+        right: 50px;
+
+        input {
+          margin: 0;
+          display: inline;
+          height: 30px;
+          padding: 0 10px;
+          padding-right: 25px;
+          border-radius: 0;
+          width: 100%;
+          background: #FFF;
+          border-color: #fff;
+        }
+
+        .topbar__closeform {
+          color: #AFAEAE;
+          cursor: pointer;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 55px;
+          padding: 0 10px;
+
+          position: absolute;
+          right: -3px;
+          font-size: 16px;
+          top: 1px;
+          opacity: 0.3;
+          transition: all .3s ease-out;
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+      }
+
+      &.active .topbar__searchfield {
+        width: 200px;
+        margin-right: 10px;
+        opacity: 1;
+      }
+
+      .topbar__searchbutton {
+        font-size: 22px;
+        color: #AFAEAE;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 55px;
+        padding: 0 10px;
+        &:before {
+          position: relative;
+          top: 2px;
+        }
+        &:hover {
+          background-color: darken(#FAFAFA, 3%);
+        }
+      }
+
+
+
+      &:hover {
+        //background-color: darken(#FAFAFA, 3%);
+      }
+    }
+  }
+}

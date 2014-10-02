@@ -1,0 +1,67 @@
+
+$susy: (
+  math: fluid,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 24,
+  gutters: 1/2,
+  column-width: false,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+$bg-color: #FFF;
+$text-size: rem-calc(16px);
+
+/* Small devices (tablets, 768px and up) */
+$sm: 768px;
+
+/* Medium devices (desktops, 992px and up) */
+$md: 992px;
+
+/* Large devices (large desktops, 1200px and up) */
+$lg: 1200px;
+
+
+
+.container {
+  @include container(72%);
+}
+
+@include breakpoint($sm) {
+
+  .hide-sm {
+    display: none !important;
+  }
+
+  .container {
+    @include container(74%);
+  }
+
+}
+
+@include breakpoint($md) {
+  .hide-md {
+    display: none !important;
+  }
+}
+
+@include breakpoint($lg) {
+
+  .hide-lg {
+    display: none !important;
+  }
+
+  .container {
+    @include container(90%);
+  }
+
+}

@@ -1,0 +1,90 @@
+.header {
+
+  padding: 20px 0;
+
+  @include breakpoint($md) {
+    padding: 40px 0;
+  }
+
+  .header__logo {
+    @include span(24);
+    height: 50px;
+    //margin: 20px 0;
+    background-image: url(../i/logo.png);
+    background-image: url(../i/logo.svg), none;
+    background-size: 235px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @include breakpoint($md) {
+      @include span(12);
+      background-position: left center;
+    }
+  }
+  .header__phone {
+    display: none;
+
+    text-align: right;
+
+    .phone__container {
+      display: inline-block;
+      text-align: left;
+    }
+
+    span {
+      font-size: 12px;
+      display: inline-block;
+      line-height: 1;
+      margin-bottom: 6px;
+      font-weight: 300;
+    }
+
+    h2 {
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    @include breakpoint($md) {
+      display: block;
+      @include span(6);
+    }
+  }
+  .header__callback {
+    display: none;
+
+    padding-top: 10px;
+    text-align: right;
+
+    .callback__container {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .icon-phone {
+      position: absolute;
+      line-height: 36px;
+      font-size: 12px;
+      color: #CACACA;
+      margin-left: 10px;
+    }
+
+    input {
+      display: none;
+
+      @include breakpoint($lg) {
+        display: inline-block;
+        width: 100px;
+        width: calc(100% - 155px);
+        padding-left: 30px;
+      }
+    }
+
+    @include breakpoint($md) {
+      display: block;
+      @include span(6 at 19);
+    }
+  }
+
+}

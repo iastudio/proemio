@@ -1,0 +1,91 @@
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea, .select {
+
+  @include placeholder {
+    color: #807a7a;
+    font-size: 14px;
+  }
+
+  -webkit-appearance: none;
+  display: block;
+  margin-bottom: 18px;
+
+  width: 183px;
+  height: 34px;
+  border: 1px solid #e7e7e7;
+  @include border-radius(3px);
+  @include background-clip(padding-box);
+  background-color: #fdfdfd;
+
+  padding: 13px 16px;
+
+  color: #656565;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+textarea {
+  height: 100px;
+}
+
+.btn, a.btn, input[type=submit], button {
+  display: inline-block;
+  border-style: solid;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  clear: both;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline: none;
+
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+
+  padding: 0 16px;
+
+  height: 31px;
+  @include border-radius(3px);
+  @include background-clip(padding-box);
+  background-color: #e33333;
+
+  @include box-shadow(0 3px 0 #9A0E16);
+
+  margin-bottom: 18px;
+
+  transition: background-color .3s ease-out;
+
+  &:hover {
+
+    background-color: lighten(#e33333, 10%);
+
+    &:active {
+      @include box-shadow(0 1px 0 #9A0E16);
+      top: 2px;
+    }
+  }
+
+  &.btn {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 31px;
+  }
+}

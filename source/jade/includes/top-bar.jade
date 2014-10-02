@@ -1,0 +1,24 @@
+.topbar
+  .container.rel
+    .topbar__nav
+      a.topbar__menulink(href="#menu")
+        i.fa.fa-navicon
+        |&nbsp;Меню
+      nav#menu
+        ul
+          li: a(href="#") Главная
+          li: a(href="#") Каталог
+          li: a(href="#") Новости и статьи
+          li: a(href="#") Партнеры
+          li: a(href="#") Фото
+          li: a(href="#") Контакты
+    .topbar__else
+      a(href="#").topbar__signin
+        i.icon-lock
+        span Для партнеров
+      .topbar__search.inactive
+        form(id="", method="get", action="/dest/").topbar__form
+          .topbar__searchfield
+            i.fa.fa-times-circle.topbar__closeform
+            input.topbar__input(type="text", name="q")
+          i.icon-search.topbar__searchbutton
