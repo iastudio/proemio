@@ -1,3 +1,40 @@
+.touch {
+  .slider {
+    .slider__nav {
+      ul {
+        li.slidernav__item {
+          .slidernav__button {
+            &:hover {
+              background-color: #FFF;
+              .slidernav__icon {
+                background-color: #DE353A;
+                color: #FFFFFF;
+                box-shadow: 0 4px 0 #F6DCDC;
+                @include long-shadow(text, #B12A2E, 50, false);
+              }
+              span {
+                color: #000000;
+              }
+            }
+            &:active {
+              background-color: #242424;
+              .slidernav__icon {
+                background-color: #FFFFFF;
+                color: #DD383D;
+                box-shadow: 0 4px 0 #454545;
+                @include long-shadow(text, #CCCCCC, 50, false);
+              }
+              span {
+                color: #FFF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .slider {
   .slider__container {
 
@@ -153,7 +190,7 @@
             box-shadow: 0 4px 0 #F6DCDC;
             overflow: hidden;
             @include long-shadow(text, #B12A2E, 50, false);
-            margin-right: 20px;
+            margin-right: 10px;
             transition: all .3s ease-out;
             text-decoration: none;
 
@@ -171,7 +208,7 @@
             display: inline-block;
             vertical-align: middle;
             color: #000;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             line-height: 1;

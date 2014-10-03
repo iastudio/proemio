@@ -1,0 +1,101 @@
+.benefits  {
+  .benefits__items {
+    @include pie-clearfix();
+  }
+  .benefits__item {
+    width: 100%;
+    float: none;
+
+    @include breakpoint($md) {
+      width: 33.3333333%;
+      float: left;
+    }
+
+    height: 200px;
+    background-color: #EAEDEF;
+    position: relative;
+    @include pie-clearfix();
+
+    .benefits__caption {
+      width: auto;
+      float: none;
+      padding: 5px;
+      font-size: 13px;
+      text-transform: uppercase;
+      font-weight: 300;
+      position: absolute;
+      top: 30px; left: 10px;
+      span {
+        display: inline;
+        line-height: 1;
+        background-color: #fff;
+        padding: 5px 0;
+        box-shadow: 5px 0 0 #fff, -5px 0 0 #fff;
+      }
+      &:after {
+        display: none;
+        position: absolute;
+        content: ' ';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 11px 0 11px 12px;
+        border-color: transparent transparent transparent #eaedef;
+        right: -12px;
+        top: 52px;
+      }
+
+      @include breakpoint($lg) {
+        &:after {
+          display: block;
+        }
+        display: block;
+        width: 50%;
+        float: left;
+        padding: 40px 20px;
+        font-size: 15px;
+        position: static;
+        span {
+          background-color: transparent;
+          box-shadow: none;
+        }
+      }
+    }
+    .benefits__picture {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-position: center center;
+      background-size: 100%;
+      background-size: cover;
+      @include breakpoint($lg) {
+        width: 50%;
+      }
+    }
+    &:nth-child(2n) {
+      background-color: #FFFFFF;
+
+      .benefits__caption:after {
+        border-color: transparent transparent transparent #FFF;
+      }
+    }
+  }
+  .benefits__slogan {
+    height: auto;
+    line-height: 1.2;
+    font-size: 15px;
+    padding: 25px 10px;
+    background-color: #DE353A;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint($lg) {
+      height: 64px;
+      line-height: 64px;
+      font-size: 17px;
+      padding: 0;
+    }
+  }
+}

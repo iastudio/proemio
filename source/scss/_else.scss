@@ -1,0 +1,72 @@
+main {
+  padding: 50px 20px;
+  background-color: #F9F9F9;
+  header {
+    display: block;
+    padding: 20px 0;
+    border-bottom: 1px solid #BEBEBE;
+    color: #000;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+  .content {
+    @include span(24);
+    margin-bottom: 20px;
+    @include breakpoint($md) {
+      @include span(16);
+      margin-bottom: 0;
+    }
+  }
+  .sidebar {
+    @include span(24);
+    margin-bottom: 20px;
+    @include breakpoint($md) {
+      @include span(8 omega);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.col-1-2 {
+  @include span(24);
+  @include breakpoint($md) {
+    @include span(12);
+    &:last-child {
+      @include span(12 omega);
+    }
+  }
+}
+
+.poll {
+  .poll__container {
+    @include pie-clearfix();
+    margin-bottom: 20px;
+    .col-1-2 {
+      @include span(24);
+      @include breakpoint($lg) {
+        @include span(12);
+        &:last-child {
+          @include span(12 omega);
+        }
+      }
+    }
+  }
+  .btn {
+    margin-right: 18px;
+  }
+  a {
+    display: block;
+    color: #DD3C41;
+    font-size: 12px;
+    @include breakpoint($lg) {
+      display: inline-block;
+    }
+    &:hover {
+      color: #DD3C41;
+      text-decoration: none;
+    }
+  }
+}

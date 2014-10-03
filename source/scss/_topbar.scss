@@ -1,3 +1,40 @@
+.touch {
+  .topbar {
+    .topbar__menulink:hover {
+      background-color: transparent;
+      &:active {
+        background-color: darken(#FAFAFA, 3%);
+      }
+    }
+    .topbar__nav nav ul li a:hover {
+      border-bottom: 1px solid #CECECE;
+      &:active {
+        border-bottom: none;
+        color: lighten(#242424, 5%);
+      }
+    }
+    .topbar__else {
+      .topbar__signin:hover {
+        background-color: transparent;
+        &:active {
+          background-color: darken(#FAFAFA, 3%);
+        }
+      }
+      .topbar__search {
+        .topbar__searchfield .topbar__closeform:hover {
+          opacity: 1;
+        }
+        .topbar__searchbutton:hover {
+          background-color: transparent;
+          &:active {
+            background-color: darken(#FAFAFA, 3%);
+          }
+        }
+      }
+    }
+  }
+}
+
 .topbar {
   width: 100%;
   height: 55px;

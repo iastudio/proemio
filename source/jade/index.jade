@@ -10,8 +10,35 @@ html(lang='ru').no-js
       include includes/top-bar
       include includes/header
       include includes/slider
-      main
-        .container
-
+      include includes/benefits
+      include includes/news
+      main.container
+        .content
+          header Компания
+          div
+            p.col-1-2 Мы производим и поставляем ВСЕ ДЛЯ ФАСАДОВ И КРОВЛИ. Компания ПРОМИО находится во Владивостоке, также работая с клиентами на территории Приморского края и всего Дальнего Востока. Радушие и забота о клиентах, конструктивный подход, гибкость и мобильность, низкие цены по сравнению с другими участниками рынка, и, самое главное, долгосрочность и основательность – вот ценности, которым команда ПРОМИО следует каждый день.
+            p.col-1-2 Наш принцип – индивидуальный подход. На сайте PROEMIO Вы найдете информацию обо всем для фасадов и для кровли во Владивостоке. Дальнем Востоке производственной линией по выпуску продукции из стали с двусторонним полимерным покрытием. Европейское оборудование позволяет нам поддерживать стабильно
+        .sidebar
+          header Голосование
+          .poll
+            h2 Откуда вы о нас узнали?
+            .poll__container
+              .col-1-2
+                input#radio-1(type="radio", name="poll", checked="checked")
+                label(for="radio-1") Пресса
+                br
+                input#radio-2(type="radio", name="poll")
+                label(for="radio-2") Интернет
+                br
+                input#radio-3(type="radio", name="poll")
+                label(for="radio-3") Поисковая система
+              .col-1-2
+                input#radio-4(type="radio", name="poll")
+                label(for="radio-4") От деловых партнеров
+                br
+                input#radio-5(type="radio", name="poll")
+                label(for="radio-5") Прочее
+            a.btn(href="#") Голосовать
+            a.poll__results(href="#") Результаты голосования
       include includes/footer
     include includes/tail

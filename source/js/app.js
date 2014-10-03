@@ -1,6 +1,9 @@
 
 $(function(){
 
+  FastClick.attach(document.body);
+  $('body').bind('touchstart', function() {});
+
   $('.topbar__menulink').on('click', function(e) {
     e.preventDefault();
     $('#menu').toggleClass('active');
@@ -47,8 +50,8 @@ $(function(){
 
       $slider.find('.slider__item.active').fadeOut(300, function() {
         $slider.find('.slider__item.active').removeClass('active');
-        $slider.find('.slider__item').eq(count).addClass('active');
         $slider.find('.slider__item').eq(count).fadeIn(300);
+        $slider.find('.slider__item').eq(count).addClass('active');
         $slider.attr('data-count', count);
       });
       $slider.find('.slidernav__item.active').removeClass('active');
@@ -71,8 +74,9 @@ $(function(){
       $slider.find('.slider__item.active').fadeOut(300, function() {
         $(this).removeClass('active');
         (direction == 1) ? count++ : count--;
-        $slider.find('.slider__item').eq(count).addClass('active');
         $slider.find('.slider__item').eq(count).fadeIn(300);
+        $slider.find('.slider__item').eq(count).addClass('active');
+
         $slider.find('.slidernav__item.active').removeClass('active');
         $slider.find('.slidernav__item').eq(count).addClass('active');
         $slider.attr('data-count', count);

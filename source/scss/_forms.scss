@@ -76,6 +76,7 @@ textarea {
   &:hover {
 
     background-color: lighten(#e33333, 10%);
+    color: #FFF;
 
     &:active {
       @include box-shadow(0 1px 0 #9A0E16);
@@ -88,4 +89,40 @@ textarea {
     padding-bottom: 0;
     line-height: 31px;
   }
+}
+
+
+input[type="radio"] { display: none; }
+
+input[type="radio"] + label {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+input[type="radio"] + label:before {
+  content: ' ';
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+  position: relative;
+  width: 11px; height: 11px;
+  background: #FFFFFF;
+  transition: all .3s ease;
+  font-size: 7px;
+  color: #DE353A;
+  border-radius: 100%;
+  display: inline-block;
+  line-height: 10px;
+  vertical-align: middle;
+  border: 1px solid #CDCDCD;
+  text-align: center;
+  margin-right: 10px;
+}
+
+input[type="radio"]:checked + label:before {
+  content: "\f111";
 }
